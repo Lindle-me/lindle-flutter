@@ -1,4 +1,4 @@
-# Lindle NODE JS
+# Lindle Flutter
 Lindle is your ultimate solution for managing and organizing your web links with ease. This versatile Chrome extension empowers you to save, categorize, and access your online resources like never before.
 
 <a href="https://www.buymeacoffee.com/m2kdevelopments" target="_blank">
@@ -14,25 +14,21 @@ Lindle is your ultimate solution for managing and organizing your web links with
 
 
 ## API Documentation
-The Nodes JS <a href="https://lindle.me/api-docs">API</a> for Lindle.
+The <a href="https://lindle.me/api-docs">API</a> Documentation for Lindle.
 
 
 ## Installation
 ```
-npm i lindle --save
+flutter pub add lindle
 ```
-or 
-```
-yarn add lindle
-```
+ 
 
 ## Getting Started
 Get your Lindle API key from <a href="https://chrome.google.com/webstore/detail/igkkojjaikfmiibedalhgmfnjohlhmaj">Chrome Extension</a>.
 
 ```
-const apiKey = process.env.API_KEY;
-const { Lindle } = require('lindle');
-const lindle = new Lindle(apiKey);
+const apiKey = "Your key here...";
+const lindle = Lindle(apiKey:apiKey);
 ```
 
 ## Get Links
