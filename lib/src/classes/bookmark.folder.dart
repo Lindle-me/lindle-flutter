@@ -4,7 +4,7 @@
 class BookmarkFolder{
   final String id;
   final String name;
-  final String date;
+  final int date;
   final String folder;
 
   BookmarkFolder({required this.id, required this.name, required this.folder,  required this.date});

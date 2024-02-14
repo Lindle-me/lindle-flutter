@@ -5,11 +5,9 @@ import 'package:dio/dio.dart' as dio;
 
 class Api {
   static var _accessToken = "";
-  static var _notificationId = "";
   static const url = "https://www.lindle.me";
 
   static void setAccessToken(String a) => _accessToken = a;
-  static void setNotificationId(String a) => _notificationId = a;
 
   static Future<dynamic>? get(String subroute) async {
     try {
@@ -20,8 +18,7 @@ class Api {
           options: dio.Options(headers: {
             'accept': '*/*',
             'Authorization': 'Bearer $_accessToken',
-            'Content-Type': 'application/json',
-            'androidnotificationid': _notificationId,
+            'Content-Type': 'application/json'
           }));
       if (response.statusCode! >= 200 && response.statusCode! <= 400) {
         return response.data;

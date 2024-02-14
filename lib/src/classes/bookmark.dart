@@ -5,7 +5,7 @@ class Bookmark{
   final String id;
   final String name;
   final String url;
-  final String date;
+  final int date;
   final String folder;
 
   Bookmark({required this.id, required this.name, required this.url, required this.folder,  required this.date});

@@ -5,6 +5,6 @@ class User{
   final String id;
   final String name;
   final String image;
-  final String linkLimit;
+  final int linkLimit;
   User({required this.id, required this.name, required this.image, required this.linkLimit});
 }
