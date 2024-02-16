@@ -1,6 +1,6 @@
 name: lindle
 description: Flutter library for Lindle API
-version: 1.0.0
+version: 1.0.1
 homepage: https://lindle.me
 
 environment:
@@ -23,7 +23,18 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  plugin:
+    platforms:
+      android:
+        default_package: lindle
+      ios:
+        default_package: lindle
+      web:
+        default_package: lindle
+      macos:
+        default_package: lindle
+      windows:
+        default_package: lindle
   # To add assets to your package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
