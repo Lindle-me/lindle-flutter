@@ -25,3 +25,7 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+
+lib/lindle_flutter.dart
+lindle_flutter.iml

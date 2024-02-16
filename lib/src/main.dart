@@ -15,9 +15,12 @@ import 'package:lindle/src/utils/api.dart';
 class Lindle {
   final String apiKey;
 
+  // Constructor to initialize Lindle with an API key
   const Lindle({required this.apiKey});
 
   // GETTING LINKS AND FOLDERS
+
+  /// Fetches user information.
   Future<User> getUser() async {
     Api.setAccessToken(apiKey);
     var res = await Api.get('/api/user');
@@ -29,6 +32,7 @@ class Lindle {
     );
   }
 
+  /// Fetches a list of links.
   Future<List<Link>> getLinks() async {
     Api.setAccessToken(apiKey);
     var list = await Api.get('/api/links');
@@ -45,6 +49,9 @@ class Lindle {
     return links;
   }
 
+  /// Fetches a list of folders.
+  ///
+  /// If [withLinks] is true, also fetches associated links.
   Future<List<Folder>> getFolders({withLinks = false}) async {
     Api.setAccessToken(apiKey);
     var list = await Api.get('/api/folders');
@@ -71,6 +78,7 @@ class Lindle {
     return folders;
   }
 
+  /// Fetches synced bookmarks.
   Future<APIResultBookmark> getSyncedBookmarks() async {
     Api.setAccessToken(apiKey);
     var res = await Api.get('/api/links/bookmarks/sync');
@@ -97,6 +105,8 @@ class Lindle {
   }
 
   // CREATING LINKS AND FOLDERS
+
+  /// Creates a new link.
   Future<APIResultLink> createLink(
       {required String name,
       required String url,
@@ -121,6 +131,7 @@ class Lindle {
         message: res['message'], result: res['result'], link: link);
   }
 
+  /// Creates a new folder.
   Future<APIResultFolder> createFolder(
       {required String name, bool? publicFolder}) async {
     Api.setAccessToken(apiKey);
@@ -147,6 +158,7 @@ class Lindle {
   }
 
   // UPDATING LINKS AND FOLDERS
+  /// Updates an existing link.
   Future<APIResult> updateLink(
       {required String id,
       String? name,
@@ -161,6 +173,7 @@ class Lindle {
     return APIResult(message: res['message'], result: res['result']);
   }
 
+  /// Updates an existing folder.
   Future<APIResult> updateFolder(
       {required String id, String? name, bool? publicFolder}) async {
     Api.setAccessToken(apiKey);
@@ -175,12 +188,14 @@ class Lindle {
   }
 
   // DELETE and REMOVAL
+  /// Deletes a link by its ID.
   Future<APIResult> deleteLink(String id) async {
     Api.setAccessToken(apiKey);
     var res = await Api.delete('/api/links/$id');
     return APIResult(message: res['message'], result: res['result']);
   }
 
+  /// Deletes a folder by its ID.
   Future<APIResult> deleteFolder(String id) async {
     Api.setAccessToken(apiKey);
     var res = await Api.delete('/api/folders/$id');

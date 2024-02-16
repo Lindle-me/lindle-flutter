@@ -25,6 +25,8 @@ flutter pub add lindle
 
 ## Getting Started
 Get your Lindle API key from <a href="https://chrome.google.com/webstore/detail/igkkojjaikfmiibedalhgmfnjohlhmaj">Chrome Extension</a>.
+<br/>
+<img src="./api.png" alt="Chrome Extension" style="height: 400px !important" />
 
 ```
 const apiKey = "Your key here...";

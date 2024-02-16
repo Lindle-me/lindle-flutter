@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lindle/lindle_flutter.dart';
+import 'package:lindle/lindle.dart';
 
 void main() {
   const apiKey ="";

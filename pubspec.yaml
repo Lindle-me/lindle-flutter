@@ -1,6 +1,6 @@
 name: lindle
-description: Flutter library for lindle API
-version: 0.0.1
+description: Flutter library for Lindle API
+version: 1.0.0
 homepage: https://lindle.me
 
 environment:

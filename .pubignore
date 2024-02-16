@@ -1,0 +1,5 @@
+.gitignore
+/.idea
+
+lib/lindle_flutter.dart
+lindle_flutter.iml
