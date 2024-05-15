@@ -5,7 +5,7 @@ import 'package:dio/dio.dart' as dio;
 
 class Api {
   static var _accessToken = "";
-  static const url = "https://www.lindle.me";
+  static const url = "https://api.lindle.me";
 
   static void setAccessToken(String a) => _accessToken = a;
 
